@@ -1,6 +1,5 @@
 # Comments
-My job was Front-end, the back-end and design I'd obtained.
-
+My job was Front-end (Javascrip, HTML, CSS), the back-end and design (Figma) I'd obtained.
 ## Crm-description
 You can:
 - create, change or delete a client.
