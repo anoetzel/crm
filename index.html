@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Clients by skb.</title>
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/choices.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script defer src="js/choices.min.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <span class="logo">skb.</span>
+      <form class="search">
+        <input class="search__input" type="text" placeholder="Enter a request">
+      </form>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h1 class="h1">Clients</h1>
+      <div class="big-table">
+        <table class="table">
+          <thead class="table__thead">
+            <tr>
+              <th class="th th-id" data-type="id"><span>ID</span><button class="table__sort arrow-up"
+                  data-type="id"></button></th>
+              <th class="th th-fullname" data-type="fullname"><span>Full name</span><button class="table__sort"
+                  data-type="fullname"></button><span class="table__alphabet">A-Z</span></th>
+              <th class="th th-date" data-type="date"><span>Date and time of creation</span> <button class="table__sort"
+                  data-type="date"></button></th>
+              <th class="th th-last-change" data-type="last-change"><span>Last changes</span> <button
+                  class="table__sort" data-type="last-change"></button></th>
+              <th class="th th-contacts" data-type="contacts">Contacts</th>
+              <th class="th th-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="table__body">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="preloader">
+        <svg class="preloader__rotator" width="80" height="80" viewBox="0 0 80 80" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path class="preloader__stroke"
+            d="M4.00025 40.0005C4.00025 59.8825 20.1182 76.0005 40.0002 76.0005C59.8822 76.0005 76.0002 59.8825 76.0002 40.0005C76.0002 20.1185 59.8823 4.00049 40.0003 4.00049C35.3513 4.00048 30.9082 4.88148 26.8282 6.48648"
+            stroke-width="8" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <button class="btn modal-btn" data-path="add-client" data-animation="fadeInUp" data-speed="400">
+        <svg class="btn__icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" />
+        </svg>
+        Add client
+      </button>
+
+      <div class="modal" id="modal">
+        <div class="modal__container" data-target="add-client">
+          <button class="modal-close" title="Закрыть окно"></button>
+          <div class="form" name="client">
+            <div class="form__content">
+              <h2 class="form__legend">New client</h2>
+              <label class="form__label">
+                <input class="form__input form__surname form__input--required" type="text" name="surname" required>
+                <div class="form__placeholder">Surname<span>*</span></div>
+              </label>
+              <label class="form__label">
+                <input class="form__input form__name form__input--required" type="text" name="firstname" required>
+                <div class="form__placeholder">Name<span>*</span></div>
+              </label>
+              <label class="form__label">
+                <input class="form__input form__lastname" type="text" name="lastname">
+                <div class="form__placeholder">Second name</div>
+              </label>
+            </div>
+            <div class="form__contacts">
+              <ul class="form__list"></ul>
+              <button class="form__add-contact js-add-contact">Add contact</button>
+            </div>
+            <div class="form__error"></div>
+            <button class="form__save">Save</button>
+            <button class="form__cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+</html>
