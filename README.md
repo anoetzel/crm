@@ -8,3 +8,7 @@ You can:
 - create, change or delete a client.
 - search the needed client.
 - share the link to the client's page.
+
+## How to see the website
+Start the backend: `node crm-backend index.js`
+Then open index.html in browser.
