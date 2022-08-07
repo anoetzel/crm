@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Anna Nötzel",
   "description": "CRM System",
-  "main": "./crm-backend/index.js",
+  "main": "index.html",
   "devDependencies": {
     "axios": "^0.21.1",
     "jest": "^26.6.3"
