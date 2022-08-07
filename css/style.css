@@ -210,7 +210,6 @@ body {
   color: var(--text-gray);
 }
 
-
 .table__sort {
   margin: 0;
   padding: 0;
@@ -263,30 +262,30 @@ body {
 
 .preloader__rotator {
   -webkit-animation: rotator 1.4s linear infinite;
-          animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
 }
 
 @-webkit-keyframes rotator {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes rotator {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -294,8 +293,8 @@ body {
   fill: none;
   stroke: var(--primary);
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 
 .table__body tr {
@@ -353,8 +352,6 @@ body {
 .btn:hover path {
   fill: var(--white);
 }
-
-
 
 .modal {
   --transition-time: 0.3s;
@@ -953,8 +950,8 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-right: 20px;
   cursor: pointer;
   -webkit-transition: color var(--transition);
@@ -990,7 +987,7 @@ body {
 .client__change--load {
   background-image: url('../img/edit-active.svg');
   -webkit-animation: rotator 1.4s linear infinite;
-          animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
 }
 
 .client__delete {
@@ -1009,13 +1006,13 @@ body {
 .client__delete-btn:active .client__delete {
   background-image: url('../img/delete-client-active.svg');
   -webkit-animation: rotator 1.4s linear infinite;
-          animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
 }
 
 .client__delete--load {
   background-image: url('../img/delete-client-active.svg');
   -webkit-animation: rotator 1.4s linear infinite;
-          animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
 }
 
 .client__time {
@@ -1136,6 +1133,7 @@ body {
 }
 
 @media (max-width: 1224px) {
+
   .client__change-btn,
   .client__delete-btn {
     margin-right: 0;
@@ -1242,4 +1240,3 @@ body {
     width: 300px;
   }
 }
-
