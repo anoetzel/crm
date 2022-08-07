@@ -10,5 +10,5 @@ You can:
 - share the link to the client's page.
 
 ## How to see the website
-Start the backend: `node crm-backend index.js`
-Then open index.html in browser.
+Start the backend: `npm run start:backend`
+Start the frontend: `npm run start:frontend`

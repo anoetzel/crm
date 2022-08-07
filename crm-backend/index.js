@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 // префикс URI для всех методов приложения
 const URI_PREFIX = '/api/clients';
 
+
 /**
  * Класс ошибки, используется для отправки ответа с определённым кодом и описанием ошибки
  */
@@ -160,7 +161,6 @@ if (!existsSync(DB_FILE)) writeFileSync(DB_FILE, '[]', { encoding: 'utf8' });
 // создаём HTTP сервер, переданная функция будет реагировать на все запросы к нему
 module.exports = createServer(async (req, res) => {
   // req - объект с информацией о запросе, res - объект для управления отправляемым ответом
-
   // этот заголовок ответа указывает, что тело ответа будет в JSON формате
   res.setHeader('Content-Type', 'application/json');
 
@@ -237,7 +237,7 @@ module.exports = createServer(async (req, res) => {
   // выводим инструкцию, как только сервер запустился...
   .on('listening', () => {
     if (process.env.NODE_ENV !== 'test') {
-      console.log(`Сервер CRM запущен. Вы можете использовать его по адресу http://localhost:${PORT}`);
+/*      console.log(`Сервер CRM запущен. Вы можете использовать его по адресу http://localhost:${PORT}`);
       console.log('Нажмите CTRL+C, чтобы остановить сервер');
       console.log('Доступные методы:');
       console.log(`GET ${URI_PREFIX} - получить список клиентов, в query параметр search можно передать поисковый запрос`);
@@ -247,7 +247,7 @@ module.exports = createServer(async (req, res) => {
       console.log(`PATCH ${URI_PREFIX}/{id} - изменить клиента с ID, в теле запроса нужно передать объект { name?: string, surname?: string, lastName?: string, contacts?: object[] }`);
       console.log(`\tcontacts - массив объектов контактов вида { type: string, value: string }`);
       console.log(`DELETE ${URI_PREFIX}/{id} - удалить клиента по ID`);
-    }
+*/    }
   })
   // ...и вызываем запуск сервера на указанном порту
   .listen(PORT);
